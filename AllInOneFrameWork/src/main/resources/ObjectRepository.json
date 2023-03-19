@@ -1,0 +1,11 @@
+{
+  "Select Environment Screen" : {
+    "Environment Button" : "id###something",
+    "Change Button" : "accessbility###something"
+  },
+  "Login Screen" : {
+    "Login UserName" : "xpath###something",
+    "Login Password" : "id###something",
+    "Login Button" : "xpath###something"
+  }
+}

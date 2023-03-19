@@ -1,8 +1,10 @@
 package Utils;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 
 /**
@@ -11,6 +13,68 @@ import io.appium.java_client.MobileElement;
  *
  */
 public class ActionsMethodsOnElements {
+	
+	/**
+	 * 
+	 * @param arr
+	 * @return By
+	 */
+	public static By getLocator(String[] arr) {
+		switch(arr[0]) {
+		case "xpath":
+			return By.xpath(arr[1]);
+		case "classname":
+			return By.className(arr[1]);
+		case "name":
+			return By.name(arr[1]);
+		case "linkText":
+			return By.linkText(arr[1]);
+		case "partialLinkText":
+			return By.partialLinkText(arr[1]);
+		case "UIAutomatorSelector":
+			return MobileBy.AndroidUIAutomator(arr[1]);
+		case "id":
+			return By.id(arr[1]);
+		case "accessbilityID":
+			return MobileBy.AccessibilityId(arr[1]);
+		default:
+			Log.message("Please Specify the correct locator value...");
+			return null;
+		}
+		
+	}
+	
+	/**
+	 * 
+	 * @param driver
+	 * @param arr
+	 * @return WebElement
+	 */
+	public static WebElement fetchElement(AppiumDriver driver, String[] arr) {
+        switch (arr[0]) {
+            case "xpath":
+                return driver.findElement(By.xpath(arr[1]));
+            case "className":
+                return driver.findElement(By.className(arr[1]));
+            case "name":
+                return driver.findElement(By.name(arr[1]));
+            case "linkText":
+                return driver.findElement(By.linkText(arr[1]));
+            case "partialLinkText":
+                return driver.findElement(By.partialLinkText(arr[1]));
+            case "UIAutomatorSelector":
+                return driver.findElement(MobileBy.AndroidUIAutomator(arr[1]));
+            case "id":
+                return driver.findElement(By.id(arr[1]));
+            case "accessbilityID":
+    			return driver.findElement(MobileBy.AccessibilityId(arr[1]));
+ 
+            default:
+            	Log.message("Please Specify the correct locator value...");
+                return null;
+        }
+    }
+	
 	
 	/**
 	 * To click on the Element
