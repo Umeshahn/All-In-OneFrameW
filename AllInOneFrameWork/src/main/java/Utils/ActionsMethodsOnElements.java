@@ -26,7 +26,7 @@ public class ActionsMethodsOnElements {
 	 * @return By
 	 */
 	public static By getLocator(String[] arr) {
-		switch (arr[0]) {
+		switch (arr[1]) {
 		case "xpath":
 			return By.xpath(arr[1]);
 		case "classname":
