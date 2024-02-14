@@ -1,0 +1,33 @@
+{
+  "ExecutionDevice": "Pixel4",
+  "Android_CommonValues": {
+    "platformName": "Android",
+    "automationName": "UiAutomator2",
+    "autoGrantPermissions": true,
+    "appWaitDuration": "30000",
+    "newCommandTimeout": "100000",
+    "androidInstallTimeout": 90000,
+    "noReset": true
+  },
+  "iOS_CommonValues": {
+    "platformName": "IOS",
+    "automationName": "XCUITest",
+    "noReset": true,
+    "newCommandTimeout": "3000",
+    "wdaStartupRetries": "4",
+    "iosInstallPause": "8000",
+    "wdaStartupRetryInterval": "20000",
+    "usePrebuiltWDA": true,
+    "autoAcceptAlerts":true
+  },
+  "Pixel4" : {
+    "deviceName" : "Pixel4",
+    "platformVersion" : "11",
+    "udid" : "99191FFAZ007G1"
+  },
+  "MiA1" : {
+    "deviceName" : "MiA1",
+    "platformVersion" : "9",
+    "udid" : "005b1ec70804"
+  }
+}
